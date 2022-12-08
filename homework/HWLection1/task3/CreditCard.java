@@ -14,7 +14,7 @@ public class CreditCard {
         this.pinCode = pinCode;
     }
 
-    public void deposit(Double inputMoney){
+    public void deposit(double inputMoney){
         if (inputPin()) {
             if(this.loanDebt < 0){
                 this.loanDebt+=inputMoney;

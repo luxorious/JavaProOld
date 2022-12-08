@@ -2,9 +2,10 @@ package Phone;
 
 public class PhoneDemo {
     public static void main(String[] args) {
-//        MyPhone myPhone = new MyPhone();
         Phone iphone = new Phone("iPhone 13", "Black");
         Phone samsung = new Phone("Note 20 Ultra", "white");
+        MyPhone myPhone = new MyPhone(123456, iphone);
+        MyPhone herPhone = new MyPhone(123454532, iphone);
 
         ImportPhone importPhone1 = new ImportPhone("Apple", iphone);
         ImportPhone importPhone2 = new ImportPhone("Samsung", samsung);
@@ -15,6 +16,10 @@ public class PhoneDemo {
 
         System.out.println(myPersonalPhone);
         myPersonalPhone.ring(93799992);
+
+        myPhone.ip
+        System.out.println(myPhone);
+        System.out.println(herPhone);
 
 //        myPersonalPhone.phone.getColor() = "Grey";
 
