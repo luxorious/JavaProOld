@@ -3,7 +3,6 @@ package task3;
 public class UsersDemo {
     public static void main(String[] args) {
 
-        UserEntity2 admins = new UserEntity2();
         UserEntity2 users = new UserEntity2();
 
         users.addUser(1234,"Ivan", "Bolik", "Password");
@@ -21,6 +20,5 @@ public class UsersDemo {
         users.deleteUser(12341,"Passwodfdrd");
         System.out.println("--------------------------------------------");
         users.showAllUsers();
-
     }
 }
