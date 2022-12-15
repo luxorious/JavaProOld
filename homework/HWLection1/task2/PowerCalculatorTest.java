@@ -1,4 +1,3 @@
-package task2;
 
 public class PowerCalculatorTest {
     public static void main(String[] args) {
