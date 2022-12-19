@@ -1,3 +1,7 @@
+package task1;
+
+import java.util.Arrays;
+
 public class Player extends CardsDistribution{
 //    private List<String> playersCard;
     private String playerNumber;
@@ -29,22 +33,12 @@ public class Player extends CardsDistribution{
         this.playersCard = playersCard;
     }
 
-//    public List<String> getPlayersCard() {
-//        return playersCard;
-//    }
-//
-//    public void setPlayersCard(List<String> playersCard) {
-//        this.playersCard = playersCard;
-//    }
-
-
-    public int getCards() {
-        return cards;
+    @Override
+    public String toString() {
+        return "Player{" +
+                "playerNumber='" + playerNumber + '\'' +
+                ", playersCard=" + Arrays.toString(playersCard) +
+                '}';
     }
-
-    public void setCards(int cards) {
-        this.cards = cards;
-    }
-
 
 }

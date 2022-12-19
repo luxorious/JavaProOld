@@ -1,3 +1,5 @@
+package task1;
+
 import java.util.*;
 
 public class CardsDistribution {
@@ -27,31 +29,25 @@ public class CardsDistribution {
 //    на n игроков (по 5 карт каждому) из рассортированной колоды.
 //    Разделяйте пять карт, выданных каждому игроку, пустой строкой.
 
-
-
     public List<String> mixCards(){
         this.mixed = Arrays.asList(CARDS_DECK);
         Collections.shuffle(mixed);
-        this.mixed.toArray();
-//        for (int i = 0; i < mixed.size(); i++) {
-//            System.out.println(mixed.get(i));
-//        }
         return this.mixed;
     }
+
     public ArrayList<Player> distributing(){
         mixCards();
         int numb = 0;
-        String[] cardsForOnePerson = new String[5];
+
         for (int j = 0; j < numberPlayers; j++) {
+            String[] cardsForOnePerson = new String[5];
             Player player = new Player();
             player.setPlayerNumber("player " + (j + 1));
-            System.out.println("прохід " + j);
             int l = 0;
             for (int i = numb; i < mixed.size(); i++) {
-                System.out.println("etre " + l);
                 numb++;
                 cardsForOnePerson[l] = this.mixed.get(i);
-                System.out.println(this.mixed.get(i));
+//                this.mixed.remove(0);
                 l+=1;
                 if (l == 0){
                     ;
@@ -59,24 +55,44 @@ public class CardsDistribution {
                     break;
                 }
             }
-            //чомусь додає у всі масиви дані з останнього проходу.
-            System.out.println(Arrays.toString(cardsForOnePerson));
-            System.out.println(l);
             player.setPlayersCard(cardsForOnePerson);
             listOfPlayers.add(player);
         }
-        for(Player name:listOfPlayers) {
-            System.out.println(name.getPlayerNumber());
-            System.out.println(Arrays.toString(name.getPlayersCard()));
-        }
-        System.out.println(this.mixed);
         return listOfPlayers;
     }
 
 
+
+//    public ArrayList<Player> distributing(){
+//        mixCards();
+//        int numb = 0;
+//
+//        for (int j = 0; j < numberPlayers; j++) {
+//            String[] cardsForOnePerson = new String[5];
+//            Player player = new Player();
+//            player.setPlayerNumber("player " + (j + 1));
+//            int l = 0;
+//            for (int i = numb; i < mixed.size(); i++) {
+//                numb++;
+//                cardsForOnePerson[l] = this.mixed.get(i);
+//                l+=1;
+//                if (l == 0){
+//                    ;
+//                } else if (l%5 == 0){
+//                    break;
+//                }
+//            }
+//            player.setPlayersCard(cardsForOnePerson);
+//            listOfPlayers.add(player);
+//        }
+//        return listOfPlayers;
+//    }
+
     public List<String> getMixed() {
         return mixed;
     }
-}
 
-// як циклом створити потрібну кількість гравців?
+    public void setMixed(List<String> mixed) {
+        this.mixed = mixed;
+    }
+}
