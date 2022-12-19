@@ -3,7 +3,7 @@ package printArr;
 import java.util.Random;
 
 public class CreateArray {
-    private int lengthArr = 3;
+    private int lengthArr;
     private int[] arr = new int[lengthArr];
 
     public CreateArray(int lengthArr) {
