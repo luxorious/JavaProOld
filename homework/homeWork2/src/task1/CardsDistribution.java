@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CardsDistribution {
     private int numberPlayers;
-    private List<String> mixed;
+    final int NUMBER_OF_CARDS_PER_PLAYER = 5;
     ArrayList<Player> listOfPlayers = new ArrayList<>();
     final String[] CARDS_DECK = {
             "6♣️", "6♦️", "6♠️", "6♥️",
@@ -17,6 +17,7 @@ public class CardsDistribution {
             "K♣️", "K♦️", "K♠️", "K♥️",
             "A♣️", "A♦️", "A♠️", "A♥️",
     };
+    private ArrayList<String> mixed = new ArrayList<>(Arrays.asList(CARDS_DECK));
 
     public CardsDistribution(int numberPlayers) {
         this.numberPlayers = numberPlayers;
@@ -30,28 +31,29 @@ public class CardsDistribution {
 //    Разделяйте пять карт, выданных каждому игроку, пустой строкой.
 
     public List<String> mixCards(){
-        this.mixed = Arrays.asList(CARDS_DECK);
-        Collections.shuffle(mixed);
+        Collections.shuffle(this.mixed);
         return this.mixed;
     }
 
     public ArrayList<Player> distributing(){
         mixCards();
-        int numb = 0;
-
         for (int j = 0; j < numberPlayers; j++) {
-            String[] cardsForOnePerson = new String[5];
+            if (mixed.size() < 5){
+                break;
+            }
+
+            String[] cardsForOnePerson = new String[NUMBER_OF_CARDS_PER_PLAYER];
             Player player = new Player();
             player.setPlayerNumber("player " + (j + 1));
             int l = 0;
-            for (int i = numb; i < mixed.size(); i++) {
-                numb++;
-                cardsForOnePerson[l] = this.mixed.get(i);
-//                this.mixed.remove(0);
+
+            for (int i = 0; i <= NUMBER_OF_CARDS_PER_PLAYER; i++) {
+                cardsForOnePerson[l] = this.mixed.get(0);
+                this.mixed.remove(0);
                 l+=1;
-                if (l == 0){
+                if (i == 0){
                     ;
-                } else if (l%5 == 0){
+                } else if (l == 5){
                     break;
                 }
             }
@@ -62,37 +64,11 @@ public class CardsDistribution {
     }
 
 
-
-//    public ArrayList<Player> distributing(){
-//        mixCards();
-//        int numb = 0;
-//
-//        for (int j = 0; j < numberPlayers; j++) {
-//            String[] cardsForOnePerson = new String[5];
-//            Player player = new Player();
-//            player.setPlayerNumber("player " + (j + 1));
-//            int l = 0;
-//            for (int i = numb; i < mixed.size(); i++) {
-//                numb++;
-//                cardsForOnePerson[l] = this.mixed.get(i);
-//                l+=1;
-//                if (l == 0){
-//                    ;
-//                } else if (l%5 == 0){
-//                    break;
-//                }
-//            }
-//            player.setPlayersCard(cardsForOnePerson);
-//            listOfPlayers.add(player);
-//        }
-//        return listOfPlayers;
-//    }
-
     public List<String> getMixed() {
         return mixed;
     }
 
-    public void setMixed(List<String> mixed) {
+    public void setMixed(ArrayList<String> mixed) {
         this.mixed = mixed;
     }
 }

@@ -30,4 +30,11 @@ public class Distrib {
         Collections.shuffle(List.of(arr));
         return arr;
     }
+
+    @Override
+    public String toString() {
+        return "Distrib{" +
+                "userCard=" + Arrays.toString(userCard) +
+                '}';
+    }
 }
