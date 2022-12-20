@@ -3,18 +3,25 @@ package printArr;
 import java.util.Random;
 
 public class CreateArray {
-    private int lengthArr;
-    private int[] arr = new int[lengthArr];
     Random random = new Random();
 
-    public CreateArray(int lengthArr) {
-        this.lengthArr = lengthArr;
+    private int lengthArr = random.nextInt(50);
+    private int[] arr = new int[3];
+
+    public CreateArray() {
+        this.arr = arr;
     }
 
     public int[] create(){
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(10);
+        for (int i = 0; i < this.arr.length; i++) {
+            this.arr[i] = random.nextInt(10);
         }
-        return arr;
+        return this.arr;
+    }
+
+    public void add(){
+        for (int i = 0; i < this.arr.length; i++) {
+            System.out.println(this.arr[i] += 2);
+        }
     }
 }

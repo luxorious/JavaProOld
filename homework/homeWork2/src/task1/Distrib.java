@@ -26,8 +26,8 @@ public class Distrib {
     }
 
     public List<String> mixCards(){
-        String[] arr = Arrays.asList(CARDS_DECK);
-        Collections.shuffle(arr);
+        List<String> arr = Arrays.asList(String.valueOf(CARDS_DECK));
+        Collections.shuffle(List.of(arr));
         return arr;
     }
 }
