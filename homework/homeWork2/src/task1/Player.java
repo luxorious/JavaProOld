@@ -16,8 +16,6 @@ public class Player extends CardsDistribution{
 
     private String[] playersCard = new String[5];
 
-    private int cards;
-
     public Player(int numberPlayers) {
         super(numberPlayers);
     }
@@ -33,6 +31,12 @@ public class Player extends CardsDistribution{
         this.playersCard = playersCard;
     }
 
+    public void output(){
+        for (int i = 0; i < playersCard.length; i++) {
+            System.out.print(playersCard[i] + " ");
+        }
+    }
+
     @Override
     public String toString() {
         return "Player{" +
@@ -40,5 +44,4 @@ public class Player extends CardsDistribution{
                 ", playersCard=" + Arrays.toString(playersCard) +
                 '}';
     }
-
 }

@@ -29,11 +29,11 @@ public class Main {
 
         CardsDistribution cards = new CardsDistribution(numberPlayers);
         ArrayList <Player> arr= cards.distributing();
+
         for (int i = 0; i < arr.size(); i++) {
+            arr.get(i).output();
             System.out.println(arr.get(i).getPlayerNumber());
-            System.out.println(Arrays.toString(arr.get(i).getPlayersCard()));
-            System.out.println();
         }
-        System.out.println("Cards left in the deck - " + cards.getMixed().size());
+        System.out.println("\nCards left in the deck - " + cards.getMixed().size());
     }
 }
