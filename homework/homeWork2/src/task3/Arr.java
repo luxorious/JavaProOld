@@ -20,11 +20,11 @@ public class Arr {
 
         long sum = 0;
         for (int number:ArrayOfNumbers) {
-            if (number%2 == 0){
+            if (number%2 != 0){
                 sum+=number;
             }
         }
         System.out.println("Array:\n" + Arrays.toString(ArrayOfNumbers));
-        System.out.printf("Sum all even numbers in Array = %d", sum);
+        System.out.printf("Sum all odd numbers in Array = %d", sum);
     }
 }
