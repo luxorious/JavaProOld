@@ -3,8 +3,12 @@ package task1;
 import java.util.Arrays;
 
 public class Player extends CardsDistribution{
-//    private List<String> playersCard;
     private String playerNumber;
+
+    private String[] playersCard = new String[5];
+
+    public Player() {
+    }
 
     public String getPlayerNumber() {
         return playerNumber;
@@ -12,15 +16,6 @@ public class Player extends CardsDistribution{
 
     public void setPlayerNumber(String playerNumber) {
         this.playerNumber = playerNumber;
-    }
-
-    private String[] playersCard = new String[5];
-
-    public Player(int numberPlayers) {
-        super(numberPlayers);
-    }
-
-    public Player() {
     }
 
     public String[] getPlayersCard() {

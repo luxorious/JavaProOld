@@ -5,7 +5,7 @@ import java.util.*;
 public class CardsDistribution {
     private int numberPlayers;
     final int NUMBER_OF_CARDS_PER_PLAYER = 5;
-    ArrayList<Player> listOfPlayers = new ArrayList<>();
+    private ArrayList<Player> listOfPlayers = new ArrayList<>();
     final String[] CARDS_DECK = {
             "6♣️", "6♦️", "6♠️", "6♥️",
             "7♣️", "7♦️", "7♠️", "7♥️",
@@ -63,12 +63,7 @@ public class CardsDistribution {
         return listOfPlayers;
     }
 
-
     public List<String> getMixed() {
         return mixed;
-    }
-
-    public void setMixed(ArrayList<String> mixed) {
-        this.mixed = mixed;
     }
 }
