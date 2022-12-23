@@ -1,7 +1,13 @@
 # Compiled class file
 *.class
 *.DS_Store
+
+
+*.iml
+*.xml
 # Log file
+*.idea
+
 *.log
 
 # BlueJ files
