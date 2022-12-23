@@ -56,6 +56,15 @@ class SizeMatters {
     }
 }
 
+
+------------done--------------
+class SizeMatters {
+    public static void main(String[] args) {
+        System.out.println("Sorry, I have an errors.");
+        System.out.println("Please fix me!");
+    }
+}
+
 7.
 Исправьте ошибки компиляции в данной программе.
 
@@ -78,6 +87,23 @@ public class SumTwoNumbers {
    }
 
 }
+-----------done----------
+ class SumTwoNumbers {
+
+    public static void main(String[] args) {
+
+        int numberOne = 10;
+        int numberTwo = 20;
+
+        System.out.println("Number 1 = " + numberOne);
+        System.out.println("Number 2 = " + numberTwo);
+
+        int sum = numberOne + numberTwo;
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
 
 8.
 Исправьте ошибки компиляции в данной программе.
@@ -96,6 +122,24 @@ public class CorrectDataTypes {
 
       System.out.println("Sum = " + sum);
    }
+
+}
+
+-------done------
+class CorrectDataTypes {
+
+    public static void main(String[] args) {
+
+        int numberOne = 10;
+        double numberTwo = 20.0;
+
+        System.out.println("Number 1 = " + numberOne);
+        System.out.println("Number 2 = " + numberTwo);
+
+        double sum = numberOne + numberTwo;
+
+        System.out.println("Sum = " + sum);
+    }
 
 }
 
