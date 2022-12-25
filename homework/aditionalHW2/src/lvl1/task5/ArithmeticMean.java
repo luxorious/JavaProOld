@@ -1,4 +1,4 @@
-package task5;
+package lvl1.task5;
 
 import java.util.Scanner;
 
