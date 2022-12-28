@@ -8,7 +8,7 @@ public class ForInfiniteLoop {
             System.out.println("Am moving to minus infinity " + i);
             if (i <= -10) {
                 System.out.println("oops");
-//                break;
+                break;
             }
         }
     }
