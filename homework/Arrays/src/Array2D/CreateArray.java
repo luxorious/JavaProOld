@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class CreateArray {
     public Random random = new Random();
-    protected int row = 2;//random.nextInt(10);
-    protected int column = 2; //random.nextInt(10);
+    protected int row = random.nextInt(10);
+    protected int column = random.nextInt(10);
     protected int[][] arr = new int[row][column];
     public int[][] create(){
         int[][] arr = new int[row][column];
