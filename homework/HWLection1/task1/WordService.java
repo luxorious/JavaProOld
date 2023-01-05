@@ -12,31 +12,24 @@ public class WordService {
 
     public void findMostFrequentWord() {
         String[] words = text.split(" ");
-        ArrayList<String> word = new ArrayList<String>();
+        ArrayList<String> word = new ArrayList<>();
+        int counter = 0;
+        int wordsCounter = 0;
         String mostOftenWord = "";
-        int numberWords = 0;
-        for (int i = 0; i < words.length; i++) {
-            int counter = 0;
-            for(int j = 0; j < words.length; j++){
-                if(words[i].equals(words[j])){
-                    counter++;
-                    for(String elem of words){
 
+        for (int i = 0; i < words.length; i++) {
+            wordsCounter = 0;
+            for (int j = i+1; j < words.length; j++) {
+                if (words[i].equals(words[j])){
+                    counter++;
+                    if (counter > wordsCounter){
+                        wordsCounter++;
+                        mostOftenWord = words[i];
                     }
-                    mostOftenWord = words[j];
-                    System.out.println(mostOftenWord);
-//                    mostOftenWord = words[i];
-//                    word.add(words[j]);
                 }
             }
-            word.add(mostOftenWord);
-            if (counter >= numberWords){
-                word.add(mostOftenWord);
-            }
         }
-        System.out.println( Arrays.toString(word.toArray()) );
-
+        System.out.println(mostOftenWord);
     }
-
 }
 
