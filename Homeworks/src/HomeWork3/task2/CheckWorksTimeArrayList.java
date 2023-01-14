@@ -17,7 +17,8 @@ public class CheckWorksTimeArrayList {
             intArr.remove(0);
         }
         long timeSecondsLoop = System.currentTimeMillis();
-
+        System.out.println(intArr);
+        
         System.out.println("added 10 000 elems in ArrayList was - " +
                 (timeFirstsLoop - startTime) + " millisecond");
         System.out.println("removed 10 000 elems from ArrayList was - " +
