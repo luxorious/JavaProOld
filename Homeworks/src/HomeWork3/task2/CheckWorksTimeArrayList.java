@@ -22,8 +22,6 @@ public class CheckWorksTimeArrayList {
                 (timeFirstsLoop - startTime) + " millisecond");
         System.out.println("removed 10 000 elems from ArrayList was - " +
                 (timeSecondsLoop - timeFirstsLoop) + " millisecond");
-
-
     }
 //    Создать список ArrayList. Провести 10 тысяч вставок, удалений новых
 //    элементов и измерить сколько времени в миллисекундах занимает 10 тысяч
