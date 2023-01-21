@@ -39,7 +39,7 @@ public class TestTime {
 //        System.out.println(MergeSort.arrayToString(arr));
 
         System.out.println("__________________________________________");
-        System.out.println("sort element use Merge Sort");
+        System.out.println("sort element use Merge Sort + binary search");
         long mergeSortBinSearchStart = System.currentTimeMillis();
         MergeSort.mergeSort(arr);
 
@@ -49,11 +49,11 @@ public class TestTime {
 
         System.out.println(mergeTimeResult + " - millis merge sort.");
 //        System.out.println(MergeSort.arrayToString(arr));
-        System.out.println("________________________________________");
+//        System.out.println("________________________________________");
 
 
         System.out.println("________________________________________");
-//        System.out.println("sort O(n**2)");
+//        System.out.println("sort O(n*n)");
 //
 //        long timeBubbleSortStart = System.currentTimeMillis();
 //        for (int i = 0; i < arr.length - 1; i++) {
@@ -70,19 +70,12 @@ public class TestTime {
 //        long resultTimeBubbleSort = timeBubbleSortEnd - timeBubbleSortStart;
 //        System.out.println(resultTimeBubbleSort + " millis - bubbleSort");
 
-
-
-
-
-
-
         long timeFinish = System.currentTimeMillis();
         long timeResultAllMethod = timeFinish - timeStart;
         System.out.println(timeResultAllMethod + " millis - all method main");
     }
 
     public static void binSearch(int[] arr, int numberForSearch){
-        System.out.println("______________________________");
         long start = System.currentTimeMillis();
         BinarySearch bs = new BinarySearch();
 
@@ -90,6 +83,5 @@ public class TestTime {
         long result = finish - start;
 
         System.out.println(result + " millis binary search.");
-        System.out.println("______________________________");
     }
 }
