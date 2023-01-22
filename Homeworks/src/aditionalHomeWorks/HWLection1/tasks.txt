@@ -11,7 +11,7 @@
 максимальное число раз, то возвращаем то слово,
 которое встречается в тексте первым.
 
-class SkillDesksHomeWork.homework1.homeWork1.task1.task1.WordService {
+class SkillDesksHomeWork.homework1.homeWork1.SkillDesksHomeWork.homeWork5.task1.SkillDesksHomeWork.homeWork5.task1.WordService {
 
     public String findMostFrequentWord(String text) {
            // напишите решение тут

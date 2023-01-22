@@ -1,4 +1,4 @@
-package SkillDesksHomeWork.homeWork5;
+package SkillDesksHomeWork.homeWork5.task1;
 
 import java.util.*;
 

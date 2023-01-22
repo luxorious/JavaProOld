@@ -1,4 +1,6 @@
-package SkillDesksHomeWork.homeWork5;
+package SkillDesksHomeWork.homeWork5.task1;
+
+import SkillDesksHomeWork.homeWork5.task1.ListLoop;
 
 import java.util.ArrayList;
 import java.util.List;
