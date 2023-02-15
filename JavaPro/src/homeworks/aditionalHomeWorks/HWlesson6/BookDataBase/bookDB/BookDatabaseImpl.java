@@ -65,8 +65,6 @@ public class BookDatabaseImpl implements BookDatabase{
         return titles;
     }
 
-
-
     @Override
     public int countAllBooks() {
         return library.size();
@@ -103,7 +101,6 @@ public class BookDatabaseImpl implements BookDatabase{
         Map<String, List<Book>> allBooksOfAuthor = new HashMap<>();
         for (Book book : library){
             String author = book.getAuthor();
-            String title = book.getTitle();
             if (!allBooksOfAuthor.containsKey(book.getAuthor())){
                 allBooksOfAuthor.put(author, new ArrayList<>());
             }

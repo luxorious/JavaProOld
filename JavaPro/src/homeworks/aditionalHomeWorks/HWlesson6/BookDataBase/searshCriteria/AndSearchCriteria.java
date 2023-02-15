@@ -2,6 +2,9 @@ package homeworks.aditionalHomeWorks.HWlesson6.BookDataBase.searshCriteria;
 
 import homeworks.aditionalHomeWorks.HWlesson6.BookDataBase.Book;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AndSearchCriteria implements SearchCriteria {
 
     private SearchCriteria leftCondition;
@@ -15,8 +18,6 @@ public class AndSearchCriteria implements SearchCriteria {
 
     @Override
     public boolean match(Book book) {
-//        leftCondition.match(book);
-//        rightCondition.match(book);
         return leftCondition.match(book) && rightCondition.match(book);
 
         // допишите реализацию метода
@@ -24,5 +25,29 @@ public class AndSearchCriteria implements SearchCriteria {
         // иначе return false
     }
 
+    @Override
+    public List<Book> paging(int page, List<Book> library) {
+        List<Book> andOr = new ArrayList<>();
+        int start = (page - 1) * NUMBERS_OF_BOOKS;
+        int end = (page) * NUMBERS_OF_BOOKS;
 
+        for (Book b : library){
+            if (leftCondition.match(b) && rightCondition.match(b)){
+                andOr.add(b);
+            }
+        }
+
+        if (andOr.isEmpty()){
+            System.out.println("library is empty");
+            return andOr;
+        }
+
+        if (start > andOr.size()){
+            start = andOr.size();
+        }
+        if (end > andOr.size()){
+            end = andOr.size();
+        }
+        return andOr.subList(start, end);
+    }
 }

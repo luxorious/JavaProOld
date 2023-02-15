@@ -5,7 +5,7 @@ import homeworks.aditionalHomeWorks.HWlesson6.BookDataBase.bookDB.BookDatabase;
 
 import java.util.Scanner;
 
-class SaveBookUIAction implements UIAction {
+public class SaveBookUIAction implements UIAction {
 
     private BookDatabase bookDatabase;
 

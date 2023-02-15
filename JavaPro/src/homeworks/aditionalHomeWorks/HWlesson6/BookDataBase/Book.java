@@ -2,7 +2,7 @@ package homeworks.aditionalHomeWorks.HWlesson6.BookDataBase;
 
 import java.util.Objects;
 
-public class Book {
+public class Book implements Comparable<Book> {
 
     private Long id;
     private String title;
@@ -56,6 +56,12 @@ public class Book {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
+                ", year= " + yearOfIssue +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return o.getYearOfIssue().compareTo(this.yearOfIssue);
     }
 }

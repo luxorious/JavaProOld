@@ -8,27 +8,27 @@ import java.util.Map;
 import java.util.Optional;
 
 public interface BookDatabase {
-    Long save(Book book);
+    Long save(Book book);//+
 
-    boolean delete(Long bookId);
+    boolean delete(Long bookId);//+
 
-    boolean delete(Book book);
+    boolean delete(Book book);//+
 
-    Optional<Book> findById(Long bookId);
+    Optional<Book> findById(Long bookId);//+
 
-    List<Book> findByAuthor(String author);
+    List<Book> findByAuthor(String author);//+
 
-    List<Book> findByTitle(String title);
+    List<Book> findByTitle(String title);//+
 
-    int countAllBooks();
+    int countAllBooks();//+
 
-    void deleteByAuthor(String author);
+    void deleteByAuthor(String author);//+
 
-    void deleteByTitle(String title);
+    void deleteByTitle(String title);//+
 
-    List<Book> find(SearchCriteria searchCriteria);
+    List<Book> find(SearchCriteria searchCriteria);//----------------------------
 
-    boolean contains(Book book);
+    boolean contains(Book book);//+
 
     Map<String, List<Book>> getAuthorToBooksMap();
 
