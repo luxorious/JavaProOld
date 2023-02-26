@@ -14,4 +14,8 @@ public class UserInput {
 //        return login + " " + password + "\n";
         return new UserData(login, password);
     }
+    public String choice(){
+        System.out.println("registration - 1 \nlog in - 2\nexit - any key");
+        return scanner.nextLine();
+    }
 }
