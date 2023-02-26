@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class CheckUserData {
     public boolean findData(String login, String password){
+        //пошук логіна і пароля у файлі, якщо логін і пароль знайдено, повертає true
         String path = "src/homeworks/additionalHomeWorks/chatGPTTasks/workWithFiles/sources/db.txt";
 
         try (FileReader fr = new FileReader(path);
